@@ -1,0 +1,14 @@
+mission: voyager2_grand_tour
+sequence: [Earth, Jupiter, Saturn, Uranus, Neptune]
+launch_window: ["1977-08-01", "1977-09-30"]
+tof_bounds_days:
+  - [600, 800]      # Earth -> Jupiter
+  - [800, 1200]     # Jupiter -> Saturn
+  - [1200, 1800]    # Saturn -> Uranus
+  - [1000, 1600]    # Uranus -> Neptune
+min_flyby_altitude_km: 2000
+optimizer:
+  popsize: 50
+  maxiter: 400
+  seed: 7
+verify: true

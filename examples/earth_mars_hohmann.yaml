@@ -1,0 +1,10 @@
+mission: earth_mars_hohmann
+sequence: [Earth, Mars]
+launch_window: ["2026-09-01", "2026-12-31"]
+tof_bounds_days:
+  - [200, 320]
+optimizer:
+  popsize: 20
+  maxiter: 100
+  seed: 1
+verify: true
