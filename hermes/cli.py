@@ -32,9 +32,9 @@ def design(config: Path, out_dir: Path | None, no_verify: bool, no_plot: bool) -
     click.echo(f"Optimizing {spec.name} ({len(spec.sequence) - 1} legs, {spec.n_flybys} flybys)...")
     sol = optimize(spec)
     save_solution_json(sol, out_dir / "solution.json")
-    click.echo(f"  total ΔV: {sol.total_dv_kms:.3f} km/s")
-    click.echo(f"  launch C3: {sol.launch_c3_km2s2:.2f} km²/s²")
-    click.echo(f"  arrival v∞: {sol.arrival_v_inf_kms:.3f} km/s")
+    click.echo(f"  total dV: {sol.total_dv_kms:.3f} km/s")
+    click.echo(f"  launch C3: {sol.launch_c3_km2s2:.2f} km^2/s^2")
+    click.echo(f"  arrival v_inf: {sol.arrival_v_inf_kms:.3f} km/s")
     click.echo(f"  → {out_dir / 'solution.json'}")
     if not no_plot:
         plot_3d_html(sol, out_dir / "trajectory_3d.html")
